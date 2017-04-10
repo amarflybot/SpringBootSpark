@@ -23,7 +23,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
         <spark-cdh5-7-1_2.10.version>1.6.0-cdh5.7.1</spark-cdh5-7-1_2.10.version>
-    </properties>
+		<hadoop-cdh5-7-1.version>2.6.0-cdh5.7.1</hadoop-cdh5-7-1.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -79,10 +80,26 @@
         </dependency>
 
 		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-client</artifactId>
+			<version>1.2.0-cdh5.7.1</version>
+		</dependency>
+
+		<!--TEST-->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-testing-util</artifactId>
+			<version>1.2.0-cdh5.7.1</version>
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
